@@ -27,20 +27,20 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: npm/action-setup@v4
       - name: setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          cache: 'pnpm'
+          cache: 'npm'
           node-version: ${{ matrix.node-version }}
       - name: Install
-        run: pnpm install
+        run: npm install
       - name: Build
-        run: pnpm run build
+        run: npm run build
       - name: Test
-        run: pnpm run lint && pnpm test
+        run: npm run lint && npm test
       - name: Run E2E
-        run: pnpm run build
+        run: npm run build
         working-directory: examples/benchmark
 
   docker-image:
