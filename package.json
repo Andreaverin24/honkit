@@ -18,9 +18,7 @@
   ],
   "scripts": {
     "build": "honkit build",
-    "serve": "honkit serve",
-    "clean": "rm -rf node_modules && rm -rf _book",
-    "format": "prettier --write \"**/*.{mjs,js,jsx,ts,tsx,css}\""
+    "serve": "honkit serve"
   },
   "devDependencies": {
     "honkit": "^4.0.0",
