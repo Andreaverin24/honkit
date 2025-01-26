@@ -7,7 +7,7 @@ Please install following development prerequisites. You also need a [GitHub](htt
 
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en/)
-- [pnpm](https://pnpm.io/)
+- [npm](https://npm.io/)
 
 
 ### Cloning Copy of HonKit
@@ -37,13 +37,13 @@ After getting your clone, you can start playing with HonKit.
 2. Install dependencies and build packages:
 
     ```sh
-    $ pnpm install
+    $ npm install
     ```
 
 3. Run build:
 
     ```sh
-    $ pnpm run build
+    $ npm run build
     ```
 
 Under the hood, HonKit uses [Lerna](https://lerna.js.org/) to manage multiple packages:
@@ -54,7 +54,7 @@ Under the hood, HonKit uses [Lerna](https://lerna.js.org/) to manage multiple pa
 
 If you are new to Lerna, it seems to add another layer of complexity, but it's simpler than you think; you can edit codes, run tests, commit changes, etc. as usual in most cases.
 
-Note that `pnpm install` also builds a codebase, you can manually build by running `pnpm run build`.
+Note that `npm install` also builds a codebase, you can manually build by running `npm run build`.
 
 ### Creating a Branch for Your Work
 
@@ -78,7 +78,7 @@ This repository uses [Prettier](https://prettier.io/) for code formatter. We use
 - Run Prettier to reformat code:
 
     ```sh
-    $ pnpm format
+    $ npm format
     ```
 
 ##### Commit Message Format
@@ -150,14 +150,14 @@ All tests should be run at the top directory of your fork.
 Run tests for all packages:
 
 ```sh
-$ pnpm test
+$ npm test
 ```
 
 While developing, it would be good to run package level unit test since it will run faster:
 
 ```sh
 $ cd packages/PACKAGE
-$ pnpm test
+$ npm test
 ```
 
 
