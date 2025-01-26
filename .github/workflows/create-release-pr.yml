@@ -21,14 +21,14 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: npm/action-setup@v4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          cache: 'pnpm'
+          cache: 'npm'
           node-version: 22
       - name: Install
-        run: pnpm install
+        run: npm install
       - name: Update Version
         run: |
           git config --global user.email "${GIT_AUTHOR_EMAIL}"
