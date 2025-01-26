@@ -63,7 +63,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: npm/action-setup@v4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -80,7 +80,7 @@ jobs:
       - name: Set PACKAGE_VERSION
         run: echo "PACKAGE_VERSION=$(cat lerna.json | jq -r .version)" >> $GITHUB_ENV
       - name: Install
-        run: pnpm install
+        run: npm install
       - name: Publish
         run: npm run ci:release
         env:
